@@ -8,6 +8,42 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600&family=Noto+Serif+Bengali:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+  /* গ্যালারি সেকশনের বাড়তি স্টাইল */
+  .gallery-grid {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    margin-top: 24px;
+  }
+  .gallery-item {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--r);
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: 16/9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .gallery-placeholder {
+    text-align: center;
+    color: var(--muted);
+    font-size: 15px;
+    padding: 20px;
+  }
+  .gallery-placeholder span {
+    display: block;
+    font-size: 32px;
+    margin-bottom: 8px;
+  }
+</style>
 </head>
 <body>
 
@@ -61,6 +97,30 @@
       <div class="card"><h3>লাইব্রেরি</h3><p>বইয়ের সূচি ও তথ্য। পূর্ণ পাঠ পরে সদস্যদের জন্য চালু হবে।</p><a href="library.html" class="link">দেখুন →</a></div>
       <div class="card"><h3>প্রশিক্ষণ</h3><p>সংগীত, নৃত্য ও বাদ্যযন্ত্রের ক্লাস।</p><a href="training.html" class="link">দেখুন →</a></div>
       <div class="card"><h3>ইভেন্ট</h3><p>আসন্ন অনুষ্ঠান ও কর্মশালা।</p><a href="events.html" class="link">দেখুন →</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- নতুন সেকশন: গ্যালারি -->
+<section class="sec" style="background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <h2>আমাদের কার্যক্রম</h2>
+        <p class="sub">জাকের বিভিন্ন সাংস্কৃতিক অনুষ্ঠান, মঞ্চনাটক ও কর্মশালার কিছু মুহূর্ত।</p>
+      </div>
+    </div>
+    <div class="gallery-grid">
+      <!-- এখানে পরে আসল ছবি বসাতে পারবেন (img src="ছবির_লিংক" alt="...") -->
+      <div class="gallery-item">
+        <div class="gallery-placeholder"><span>🎭</span>মঞ্চনাটক ও সাংস্কৃতিক অনুষ্ঠান</div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-placeholder"><span>🎵</span>সংগীত ও নৃত্যের প্রশিক্ষণ</div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-placeholder"><span>📚</span>সংকলন প্রকাশনা ও আলোচনা সভা</div>
+      </div>
     </div>
   </div>
 </section>
