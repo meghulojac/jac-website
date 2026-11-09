@@ -149,4 +149,26 @@
       });
     });
   }
+
+  /* ---------- Scroll to Top Button ---------- */
+  var scrollTopBtn = document.createElement("button");
+  scrollTopBtn.innerHTML = "↑";
+  scrollTopBtn.setAttribute("aria-label", "উপরে যান");
+  scrollTopBtn.style.cssText = "position:fixed; bottom:24px; right:24px; width:48px; height:48px; border-radius:50%; background:var(--accent); color:var(--on-accent); border:none; font-size:24px; cursor:pointer; box-shadow:0 4px 12px rgba(0,0,0,0.15); opacity:0; visibility:hidden; transition:all 0.3s ease; z-index:99; display:flex; align-items:center; justify-content:center;";
+  
+  document.body.appendChild(scrollTopBtn);
+
+  window.addEventListener("scroll", function() {
+    if (window.scrollY > 300) {
+      scrollTopBtn.style.opacity = "1";
+      scrollTopBtn.style.visibility = "visible";
+    } else {
+      scrollTopBtn.style.opacity = "0";
+      scrollTopBtn.style.visibility = "hidden";
+    }
+  });
+
+  scrollTopBtn.addEventListener("click", function() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
 })();
