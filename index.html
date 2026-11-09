@@ -9,40 +9,30 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600&family=Noto+Serif+Bengali:wght@500;700;800&display=swap" rel="stylesheet">
 <style>
-  /* গ্যালারি সেকশনের বাড়তি স্টাইল */
+  /* গ্যালারি সেকশনের স্টাইল */
   .gallery-grid {
-    display: grid;
-    gap: 16px;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    margin-top: 24px;
+    display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); margin-top: 24px;
   }
   .gallery-item {
-    background: var(--surface);
-    border: 1px solid var(--line);
-    border-radius: var(--r);
-    overflow: hidden;
-    position: relative;
-    aspect-ratio: 16/9;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    background: var(--surface); border: 1px solid var(--line); border-radius: var(--r);
+    overflow: hidden; aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center;
   }
   .gallery-placeholder {
-    text-align: center;
-    color: var(--muted);
-    font-size: 15px;
-    padding: 20px;
+    text-align: center; color: var(--muted); font-size: 15px; padding: 20px;
   }
-  .gallery-placeholder span {
-    display: block;
-    font-size: 32px;
-    margin-bottom: 8px;
+  .gallery-placeholder span { display: block; font-size: 32px; margin-bottom: 8px; }
+
+  /* টেস্টিমোনিয়াল স্টাইল */
+  .quote-grid {
+    display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); margin-top: 24px;
   }
+  .quote-card {
+    background: var(--surface); border-left: 4px solid var(--accent); border-radius: var(--r);
+    padding: 24px; display: flex; flex-direction: column; justify-content: space-between;
+  }
+  .quote-text { font-style: italic; font-size: 16px; color: var(--ink); line-height: 1.8; }
+  .quote-author { margin-top: 16px; font-weight: 600; color: var(--accent); }
+  .quote-role { font-size: 13px; color: var(--muted); }
 </style>
 </head>
 <body>
@@ -101,7 +91,6 @@
   </div>
 </section>
 
-<!-- নতুন সেকশন: গ্যালারি -->
 <section class="sec" style="background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
   <div class="wrap">
     <div class="head">
@@ -111,17 +100,43 @@
       </div>
     </div>
     <div class="gallery-grid">
-      <!-- এখানে পরে আসল ছবি বসাতে পারবেন (img src="ছবির_লিংক" alt="...") -->
-      <div class="gallery-item">
-        <div class="gallery-placeholder"><span>🎭</span>মঞ্চনাটক ও সাংস্কৃতিক অনুষ্ঠান</div>
-      </div>
-      <div class="gallery-item">
-        <div class="gallery-placeholder"><span>🎵</span>সংগীত ও নৃত্যের প্রশিক্ষণ</div>
-      </div>
-      <div class="gallery-item">
-        <div class="gallery-placeholder"><span>📚</span>সংকলন প্রকাশনা ও আলোচনা সভা</div>
+      <div class="gallery-item"><div class="gallery-placeholder"><span>🎭</span>মঞ্চনাটক ও সাংস্কৃতিক অনুষ্ঠান</div></div>
+      <div class="gallery-item"><div class="gallery-placeholder"><span>🎵</span>সংগীত ও নৃত্যের প্রশিক্ষণ</div></div>
+      <div class="gallery-item"><div class="gallery-placeholder"><span>📚</span>সংকলন প্রকাশনা ও আলোচনা সভা</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- নতুন সেকশন: কিছু কথা/মতামত -->
+<section class="sec">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <h2>তাদের চোখে জাক</h2>
+        <p class="sub">সংগঠনের সাথে যুক্ত ব্যক্তি ও শুভাকাঙ্ক্ষীদের কিছু কথা।</p>
       </div>
     </div>
+    <div class="quote-grid">
+      <div class="quote-card">
+        <div class="quote-text">"জাক শুধু একটি সংগঠন নয়, এটি পার্বত্য চট্টগ্রামের সংস্কৃতি ও ঐতিহ্যকে আগামী প্রজন্মের কাছে পৌঁছে দেওয়ার একটি সেতু।"</div>
+        <div class="quote-author">নাম বসান</div>
+        <div class="quote-role">প্রাক্তন সভাপতি, জাক</div>
+      </div>
+      <div class="quote-card">
+        <div class="quote-text">"এখানকার প্রশিক্ষণ ও সাংস্কৃতিক পরিবেশ আমাকে গভীরভাবে অনুপ্রাণিত করেছে। জাকের কাজগুলো সত্যিই প্রশংসনীয়।"</div>
+        <div class="quote-author">নাম বসান</div>
+        <div class="quote-role">প্রশিক্ষণার্থী</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- নতুন সেকশন: যোগাযোগের আহ্বান -->
+<section class="sec" style="background: var(--hero-bg); color: var(--hero-ink); text-align: center;">
+  <div class="wrap">
+    <h2 style="color: var(--warm); font-size: 28px; margin-bottom: 12px;">আমাদের সাথে যুক্ত হতে চান?</h2>
+    <p style="color: var(--hero-muted); max-width: 60ch; margin: 0 auto 24px; font-size: 18px;">আপনি যদি সংস্কৃতি ও ঐতিহ্য সংরক্ষণের এই প্রয়াসে আমাদের সাথে যোগ দিতে চান, তবে আজই আমাদের সাথে যোগাযোগ করুন।</p>
+    <a href="contact.html" class="btn" style="background: var(--warm); border-color: var(--warm); color: #1a1208;">যোগাযোগ করুন</a>
   </div>
 </section>
 
