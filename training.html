@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>প্রশিক্ষণ - জাক</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600&family=Noto+Serif+Bengali:wght@500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="index.html"><b>জুম ঈস্‌থেটিক্‌স কাউন্সিল</b><small>জাক · রাঙ্গামাটি · প্রতিষ্ঠা ১৯৮১</small></a>
+    <nav aria-label="প্রধান মেনু">
+      <a href="index.html">হোম</a>
+      <a href="about.html">পরিচিতি</a>
+      <a href="archive.html">আর্কাইভ</a>
+      <a href="library.html">লাইব্রেরি</a>
+      <a href="training.html" aria-current="page">প্রশিক্ষণ</a>
+      <a href="events.html">ইভেন্ট</a>
+      <a href="contact.html">যোগাযোগ</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap page-title">
+    <h1>প্রশিক্ষণ</h1>
+    <p>সংগীত, নৃত্য ও বাদ্যযন্ত্রের ক্লাস। আগ্রহীরা নিচের ফর্মে আবেদন করতে পারেন।</p>
+  </div>
+
+  <div class="wrap sec">
+    <div class="grid">
+      <div class="card"><h3>সংগীত</h3><p>কণ্ঠসংগীত ও লোকগান।</p></div>
+      <div class="card"><h3>নৃত্য</h3><p>ঐতিহ্যবাহী নাচ ও দলীয় পরিবেশনা।</p></div>
+      <div class="card"><h3>বাদ্যযন্ত্র</h3><p>হেঙগরঙ, ধুধুক, শিঙা ও পুলুঙের মতো ঐতিহ্যবাহী যন্ত্র।</p></div>
+    </div>
+  </div>
+
+  <div class="wrap sec">
+    <h2>ভর্তির আবেদন</h2>
+    <p class="sub" style="margin-bottom:20px">ফর্মটি পূরণ করে পাঠান। জাকের পক্ষ থেকে পরে যোগাযোগ করা হবে।</p>
+
+    <form name="training-application" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="trainingForm">
+      <input type="hidden" name="form-name" value="training-application">
+      <p hidden><label>Bot field: <input name="bot-field"></label></p>
+
+      <label>পুরো নাম
+        <input id="tName" name="name" type="text" autocomplete="name" required>
+      </label>
+      <div class="two">
+        <label>ইমেইল
+          <input id="tEmail" name="email" type="email" autocomplete="email" required>
+        </label>
+        <label>মোবাইল
+          <input id="tPhone" name="phone" type="tel" inputmode="tel" placeholder="01XXXXXXXXX">
+        </label>
+      </div>
+      <label>কোন বিষয়ে প্রশিক্ষণ
+        <select name="subject">
+          <option>সংগীত</option>
+          <option>নৃত্য</option>
+          <option>বাদ্যযন্ত্র</option>
+        </select>
+      </label>
+
+      <div id="tErr" style="color:var(--alert);font-size:14px;min-height:1.2em;"></div>
+      <div id="tOk" class="ok" hidden>আবেদন জমা হয়েছে। জাক পরে যোগাযোগ করবে।</div>
+
+      <button class="btn" type="submit" style="justify-self:start">আবেদন পাঠান</button>
+    </form>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><h3>জুম ঈস্‌থেটিক্‌স কাউন্সিল (জাক)</h3><p>Jum Aesthetics Council (JAC)</p></div>
+    <div><h3>পাতা</h3><a href="archive.html">আর্কাইভ</a><a href="library.html">লাইব্রেরি</a><a href="training.html">প্রশিক্ষণ</a><a href="contact.html">যোগাযোগ</a></div>
+    <div><h3>অনলাইনে</h3><a href="https://www.facebook.com/JumAestheticsCouncil/" target="_blank" rel="noopener">ফেসবুক</a><a href="https://www.youtube.com/@jac-jumaestheticscouncil3782" target="_blank" rel="noopener">ইউটিউব</a></div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>যোগাযোগ - জাক</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600&family=Noto+Serif+Bengali:wght@500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="index.html"><b>জুম ঈস্‌থেটিক্‌স কাউন্সিল</b><small>জাক · রাঙ্গামাটি · প্রতিষ্ঠা ১৯৮১</small></a>
+    <nav aria-label="প্রধান মেনু">
+      <a href="index.html">হোম</a>
+      <a href="about.html">পরিচিতি</a>
+      <a href="archive.html">আর্কাইভ</a>
+      <a href="library.html">লাইব্রেরি</a>
+      <a href="training.html">প্রশিক্ষণ</a>
+      <a href="events.html">ইভেন্ট</a>
+      <a href="contact.html" aria-current="page">যোগাযোগ</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap page-title">
+    <h1>যোগাযোগ</h1>
+  </div>
+
+  <div class="wrap sec">
+    <div class="row">
+      <div class="prose">
+        <h2>কার্যালয়</h2>
+        <p style="margin-top:12px">জুম ঈস্‌থেটিক্‌স কাউন্সিল (জাক)<br>ত্রিদিব নগর সড়ক, বনরূপা<br>রাঙ্গামাটি পার্বত্য জেলা, পোস্টকোড ৪৫০০<br>ইমেইল: jac_cht@yahoo.com</p>
+        <p class="note" style="margin-top:14px">এই ঠিকানা ২০০৫ সালের স্মারক গ্রন্থ থেকে নেওয়া। প্রকাশের আগে বর্তমান ঠিকানা ও ইমেইল নিশ্চিত করুন।</p>
+      </div>
+      <div class="prose">
+        <h2>অনলাইনে</h2>
+        <p style="margin-top:12px">
+          <a href="https://www.facebook.com/JumAestheticsCouncil/" target="_blank" rel="noopener">ফেসবুক পেজ</a><br>
+          <a href="https://www.youtube.com/@jac-jumaestheticscouncil3782" target="_blank" rel="noopener">ইউটিউব চ্যানেল</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap sec">
+    <h2>বার্তা পাঠান</h2>
+    <p class="sub" style="margin-bottom:20px">প্রশ্ন বা প্রস্তাব থাকলে নিচের ফর্মে লিখুন।</p>
+
+    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="contactForm">
+      <input type="hidden" name="form-name" value="contact">
+      <p hidden><label>Bot field: <input name="bot-field"></label></p>
+
+      <label>নাম
+        <input id="cName" name="name" type="text" autocomplete="name" required>
+      </label>
+      <label>ইমেইল
+        <input id="cEmail" name="email" type="email" autocomplete="email" required>
+      </label>
+      <label>বার্তা
+        <textarea id="cMsg" name="message" required></textarea>
+      </label>
+
+      <div id="cErr" style="color:var(--alert);font-size:14px;min-height:1.2em;"></div>
+      <div id="cOk" class="ok" hidden>বার্তা পাঠানো হয়েছে। ধন্যবাদ।</div>
+
+      <button class="btn" type="submit" style="justify-self:start">পাঠান</button>
+    </form>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><h3>জুম ঈস্‌থেটিক্‌স কাউন্সিল (জাক)</h3><p>Jum Aesthetics Council (JAC)</p></div>
+    <div><h3>পাতা</h3><a href="archive.html">আর্কাইভ</a><a href="library.html">লাইব্রেরি</a><a href="training.html">প্রশিক্ষণ</a><a href="contact.html">যোগাযোগ</a></div>
+    <div><h3>অনলাইনে</h3><a href="https://www.facebook.com/JumAestheticsCouncil/" target="_blank" rel="noopener">ফেসবুক</a><a href="https://www.youtube.com/@jac-jumaestheticscouncil3782" target="_blank" rel="noopener">ইউটিউব</a></div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
