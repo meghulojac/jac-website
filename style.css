@@ -491,3 +491,35 @@ summary { cursor: pointer; font-weight: 600; color: var(--accent); }
     font-size: 20px !important;
   }
 }
+.committee-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+.member {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  padding: 16px;
+  text-align: center;
+}
+.member img {
+  width: 96px; height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 10px;
+  display: block;
+  border: 2px solid var(--line);
+}
+.member .placeholder {
+  width: 96px; height: 96px;
+  border-radius: 50%;
+  margin: 0 auto 10px;
+  background: var(--bg);
+  border: 2px dashed var(--line);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--muted); font-size: 26px;
+}
+.member h3 { font-size: 16px; }
+.member .role { color: var(--accent); font-size: 13px; font-weight: 600; margin-top: 2px; }
+.member p { color: var(--muted); font-size: 14px; margin-top: 6px; }
