@@ -172,3 +172,32 @@
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 })();
+/* ---------- committee ---------- */
+var committeeGrid = document.getElementById("committeeGrid");
+if (committeeGrid) {
+  var members = (window.COMMITTEE_DATA || []).slice().sort(function(a,b){ return (a.order||99)-(b.order||99); });
+  if (!members.length) {
+    committeeGrid.innerHTML = '<div class="empty">তথ্য শীঘ্রই যুক্ত হবে।</div>';
+  } else {
+    members.forEach(function (m) {
+      var card = document.createElement("div");
+      card.className = "member";
+      if (m.photo) {
+        var img = document.createElement("img");
+        img.src = m.photo; img.alt = m.name_bn; img.loading = "lazy";
+        card.appendChild(img);
+      } else {
+        var ph = document.createElement("div");
+        ph.className = "placeholder"; ph.textContent = (m.name_bn || "?").charAt(0);
+        card.appendChild(ph);
+      }
+      var h = document.createElement("h3"); h.textContent = m.name_bn;
+      var r = document.createElement("div"); r.className = "role"; r.textContent = m.designation_bn;
+      card.appendChild(h); card.appendChild(r);
+      if (m.bio_bn) {
+        var p = document.createElement("p"); p.textContent = m.bio_bn; card.appendChild(p);
+      }
+      committeeGrid.appendChild(card);
+    });
+  }
+}
