@@ -1,55 +1,88 @@
-/* সব ডেটা এখানে। পরে WordPress-এ স্থানান্তরের সময় এই ফাইলটিই কন্টেন্টের উৎস হবে। */
+/* ============ data.js ============ */
+/* All content lives here. Migrate to WordPress/CMS later. */
 
+// ---------- Executive Committee ----------
+window.COMMITTEE_DATA = [
+  // Replace with real data. "order" controls display order (lower = first).
+  {
+    name_bn: "নাম এখানে",
+    name_en: "Name Here",
+    designation_bn: "সভাপতি",
+    designation_en: "President",
+    photo: "images/committee/president.jpg",
+    bio_bn: "সংক্ষিপ্ত পরিচিতি এখানে।",
+    order: 1
+  },
+  {
+    name_bn: "নাম এখানে",
+    name_en: "Name Here",
+    designation_bn: "সাধারণ সম্পাদক",
+    designation_en: "General Secretary",
+    photo: "images/committee/gs.jpg",
+    bio_bn: "",
+    order: 2
+  }
+  // add more...
+];
+
+// ---------- Events ----------
+window.EVENTS_DATA = [
+  {
+    date: "2025-12-15",       // ISO for sorting later
+    day: "১৫",
+    month: "ডিসেম্বর",
+    title: "বার্ষিক সাংস্কৃতিক সন্ধ্যা",
+    desc: "গান, নাচ ও নাটকের এক সন্ধ্যা।",
+    venue: "রাঙ্গামাটি",
+    status: "upcoming",       // "upcoming" | "past"
+    photo: ""
+  }
+];
+
+// ---------- Archive ----------
 window.ARCHIVE_DATA = [
   {
     type: "সংকলন",
     title: "সুহৃদ চাকমা স্মারক গ্রন্থ",
     meta: "প্রকাশ: ২৪ ফেব্রুয়ারি ২০০৫ · প্রকাশক: জাক",
-    link: "library.html"
-  },
-  {
-    type: "মঞ্চনাটক",
-    title: "পাহাড়ের চিঠি (মঞ্চনাটক)",
-    meta: "প্রথম মঞ্চায়ন: ১৯৯৫ · নির্দেশনা: রনেল চাকমা",
-    link: "#"
-  },
-  {
-    type: "অডিও রেকর্ড",
-    title: "জুম্ম সংগীতের অডিও আর্কাইভ (১৯৮৫-২০০০)",
-    meta: "সংরক্ষণাগার · ডিজিটাল রূপান্তরের কাজ চলছে",
-    link: "#"
-  },
-  {
-    type: "সংকলন",
-    title: "পার্বত্য চট্টগ্রামের লোকগীতি সংকলন",
-    meta: "প্রকাশ: ২০১০ · সম্পাদনা: জাক প্রকাশনা বিভাগ",
-    link: "#"
-  },
-  {
-    type: "ছবি",
-    title: "প্রথম সাংস্কৃতিক সন্ধ্যার ছবি",
-    meta: "১৯৮২ সাল · কালো-সাদা ফটোগ্রাফ",
-    link: "#"
+    link: "library.html",
+    photo: "images/books/suhrid.jpg"
   }
 ];
 
-window.EVENTS_DATA = [
+// ---------- Gallery ----------
+window.GALLERY_DATA = [
+  { src: "images/gallery/stage/natok-2019.jpg", alt: "মঞ্চনাটক ২০১৯", category: "stage" },
+  { src: "images/gallery/music/rehearsal-2023.jpg", alt: "সংগীত মহড়া", category: "music" }
+];
+
+// ---------- Testimonials ----------
+window.TESTIMONIALS_DATA = [
   {
-    day: "১৫",
-    month: "ডিসেম্বর",
-    title: "বার্ষিক সাংস্কৃতিক সন্ধ্যা",
-    desc: "গান, নাচ ও নাটকের এক সন্ধ্যা। জাকের সদস্য ও আমন্ত্রিত অতিথিদের পরিবেশনা।"
-  },
+    quote: "জাক আমার শৈশবের সাংস্কৃতিক আশ্রয়।",
+    name: "নাম",
+    role: "সদস্য, ১৯৯০-এর দশক"
+  }
+];
+
+// ---------- Library Books ----------
+window.LIBRARY_DATA = [
   {
-    day: "২০",
-    month: "জানুয়ারি",
-    title: "নতুন সংকলন প্রকাশনা অনুষ্ঠান",
-    desc: "নতুন সংকলনের মোড়ক উন্মোচন এবং স্থানীয় লেখকদের সাথে আলোচনা।"
-  },
-  {
-    day: "০৮",
-    month: "ফেব্রুয়ারি",
-    title: "বাদ্যযন্ত্র কর্মশালা",
-    desc: "হেঙগরঙ, ধুধুক ও শিঙার মতো ঐতিহ্যবাহী বাদ্যযন্ত্রের হাতে-কলমে প্রশিক্ষণ।"
+    title: "সুহৃদ চাকমা স্মারক গ্রন্থ",
+    tag: "সংকলন · স্মারক গ্রন্থ",
+    year: "২০০৫",
+    editors: "শিশির চাকমা (আহবায়ক), মৃত্তিকা চাকমা, শান্তিময় চাকমা, রনেল চাকমা, করুণাশীষ চাকমা",
+    blurb: "কবি, প্রাবন্ধিক, গবেষক, সমালোচক ও গল্পকার সুহৃদ চাকমাকে নিয়ে জাকের প্রকাশনা।",
+    cover: "images/books/suhrid.jpg",
+    toc: [
+      "স্মৃতিচারণ",
+      "সুহৃদ চাকমার রচনাবলী",
+      "অগ্রন্থিত কবিতা",
+      "গল্প",
+      "সম্পাদকীয় সাহিত্য",
+      "বিবিধ",
+      "উত্তরমালা"
+    ],
+    available: false
   }
 ];
